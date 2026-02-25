@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="mxtechies.cavitytemplate.CavityTemplate" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Cavity Template</name>
+    <description>Widget that generates table based on the user input</description>
+    <icon>iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAABCGlDQ1BJQ0MgUHJvZmlsZQAAeJxjYGA8wQAELAYMDLl5JUVB7k4KEZFRCuwPGBiBEAwSk4sLGHADoKpv1yBqL+viUYcLcKakFicD6Q9ArFIEtBxopAiQLZIOYWuA2EkQtg2IXV5SUAJkB4DYRSFBzkB2CpCtkY7ETkJiJxcUgdT3ANk2uTmlyQh3M/Ck5oUGA2kOIJZhKGYIYnBncAL5H6IkfxEDg8VXBgbmCQixpJkMDNtbGRgkbiHEVBYwMPC3MDBsO48QQ4RJQWJRIliIBYiZ0tIYGD4tZ2DgjWRgEL7AwMAVDQsIHG5TALvNnSEfCNMZchhSgSKeDHkMyQx6QJYRgwGDIYMZAKbWPz9HbOBQAAAEi0lEQVR4nO1ZuU7zTBSdxXYcnEiEKkhIARSUjoaGPAFLRU1HTYNEQcdDUPAKPAA1CEUUdEgRL5COgCIBCovHs3zFVYwJ4Mz1T0iin1Mgy8yMz5m564QaY0gPyedxBqX0/XlSSH8HJ36SUnY6nTHXY4zxfb9UKsVvHHhLKX18fDw6OpJSJg9orMAYe319XV5e3tnZAc4keQKkp2RsBXxJjP0+j5/Fn4BR40/AqPEnYNRwBg9J4HdSBKoawAkQQgyv1qCUGmM455xz+1m2Aowxrutub28HQRCn8Z+F1pox1mw2G42G7/uWO4U4AUrp0tKS7/tZGVqh3W5DPfbzAgghYRh6njfUE4iiCLU42okZY0MSQAhhjGFXxgkghBhj7P0Y2FiOzxYe0AIy1NuW41HBJwZOAGPs6emp0+k4jpOyYZRSrbXneeVyOQzDu7s7Gw1a67m5uSGakNba9/2zs7PT09NCoaC1/m4kpVQIUS6XDw4OWq3W8fGxTVhUSh0eHqZvzWegTYgx5jiO4zjpArTWYBKUUhg/kFa2wIATYD4ifeTnWQMXR5EBTHwxN/EC0D5AepE0xWT7BlhG3t/wAUKIUgoKioFRSAhBCNFah2FoU9sopTK4Aa6YC8NwdXW1Wq0OjCpQvRJCKpXK3t4eY4NtVWtdLBaxN2s4AVrrUqmUvNlLhzEmn89Xq1X7r2APAZ3ILi8vz8/PgyBIMSEAmL597aSU2t3ddV13iImMUtrtdm9vb9MzcTZIKZVS2FloJ+ace56X7sTZwDnPEIgyltOootp+5Qyz/n+JDJoym7CIRTabRDuxEKLb7VJKMzhcyrKEEGNMBg24PBBFUbVa3dzczOVyX5psX8aFBtq+pczlcsNNZEKIWq1Wq9XsZ2ExRAGwQzc3N9fX1/l8/vNxM8a01nC7JqUsFovr6+vtdvvi4iIOu7G1wNUGHBFjTCklpdza2vI8jyQKu4FniBPgum6r1Wo0GsViMSnAGOM4DlyKKKU4529vb7OzsxsbGw8PD1dXV7lcTikF3g9soihyXRdMLla+trYGrRzUWtDNpSc4dEfmeV4QBJ9Libi8gwDFOQ+CgFLqum6hUACupPc7IiEEiAoh4KYs3mbQA39JrwBLoZQlkekeku+jKAINYMSwbcaYKIqAjZQSKMa7LqXUWgshOOfJBZO5Eq7rCCHfHUKWhuY7YVEUwTNQBJtxHCcMQzCS5HiQBxsM/5JScs5d1xVC+L4PjEF/ynczXmxhOzLyVcPV9yY5JSY9MASjBUgph9SRxTaGAk6AUmp6enpxcXFqair9Y1LKmZkZaCEWFha+S3x9i4MzoCghBIAz1ev1er1uP2t+fn5/f99+PPbuFSFASnlychJHaPuJxLpUZozd39/bHFcMWwFgxM1m88fbgH5CjoPqKnE+kM/n8ZRwwLZKOAE/3kb+d0x8R/YnYNT4EzBqfIhCcQk+IjIDAP1QH713AcaYl5cXrfU4C3h+fg7DMPnyXYDneSsrKxnKhF8D3O9XKpUPL4ddGgwbH3xgDBPtZ/SVqxN/AhMfRv8BXFX1VgG0WnoAAAAASUVORK5CYII=</icon>
+    <properties>
+        <propertyGroup caption="General">
+            <propertyGroup caption="Table Configuration">
+                <property key="rowCountAttribute" type="attribute" required="false">
+                    <caption>Row</caption>
+                    <description>Integer attribute for row count. Defaults to 3 if not set.</description>
+                    <attributeTypes><attributeType name="Integer"/></attributeTypes>
+                </property>
+                <property key="columnCountAttribute" type="attribute" required="false">
+                    <caption>Column</caption>
+                    <description>Integer attribute for column count. Defaults to 3 if not set.</description>
+                    <attributeTypes><attributeType name="Integer"/></attributeTypes>
+                </property>
+                <property key="generateResult" type="attribute" required="false">
+                    <caption>Generate table result</caption>
+                    <description>Boolean attribute written by the On Generate Table microflow/nanoflow. Set True to allow table generation, False to block it. The widget watches this attribute after the action executes.</description>
+                    <attributeTypes><attributeType name="Boolean"/></attributeTypes>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="Cell Statistics Attributes">
+                <property key="totalCellsAttribute" type="attribute" required="false">
+                    <caption>Total cells</caption>
+                    <description>Integer attribute to store total number of cells (rows x columns).</description>
+                    <attributeTypes><attributeType name="Integer"/></attributeTypes>
+                </property>
+                <property key="blockedCellsAttribute" type="attribute" required="false">
+                    <caption>Blocked Cell</caption>
+                    <description>Integer attribute to store count of blocked cells.</description>
+                    <attributeTypes><attributeType name="Integer"/></attributeTypes>
+                </property>
+                <property key="mergedCellsAttribute" type="attribute" required="false">
+                    <caption>Merged cells</caption>
+                    <description>Integer attribute to store count of merged cell groups.</description>
+                    <attributeTypes><attributeType name="Integer"/></attributeTypes>
+                </property>
+                <property key="blankCellsAttribute" type="attribute" required="false">
+                    <caption>Blank cells</caption>
+                    <description>Integer attribute to store count of blanked cells.</description>
+                    <attributeTypes><attributeType name="Integer"/></attributeTypes>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="Button Visibility">
+                <property key="showGenerateButton" type="boolean" defaultValue="false">
+                    <caption>Generate Table button</caption>
+                    <description>Show the Generate Table button.</description>
+                </property>
+                <property key="showAddRowButton" type="boolean" defaultValue="true">
+                    <caption>Row button (+)</caption>
+                    <description>Show button to add rows.</description>
+                </property>
+                <property key="showAddColumnButton" type="boolean" defaultValue="true">
+                    <caption>Column button (+)</caption>
+                    <description>Show button to add columns.</description>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="Features">
+                <property key="enableCellEditing" type="boolean" defaultValue="true">
+                    <caption>Enable cell editing</caption>
+                    <description>Allow users to edit cell content via input fields.</description>
+                </property>
+                <property key="enableCheckbox" type="boolean" defaultValue="true">
+                    <caption>Enable checkbox</caption>
+                    <description>Show checkbox in each cell for boolean selection.</description>
+                </property>
+                <property key="enableCellMerging" type="boolean" defaultValue="true">
+                    <caption>Enable cell merging</caption>
+                    <description>Allow users to merge cells horizontally and vertically.</description>
+                </property>
+                <property key="enableCellBlanking" type="boolean" defaultValue="true">
+                    <caption>Enable cell blanking</caption>
+                    <description>Allow users to blank selected cells. Blanked cells retain data but appear invisible.</description>
+                </property>
+            </propertyGroup>
+        </propertyGroup>
+        <propertyGroup caption="Data Source">
+            <propertyGroup caption="Table Data">
+                <property key="useAttributeData" type="attribute" required="true">
+                    <caption>Table data</caption>
+                    <description>Unlimited String attribute to store complete table data as JSON.</description>
+                    <attributeTypes><attributeType name="String"/></attributeTypes>
+                </property>
+                <property key="tableDataAttribute" type="attribute" required="false">
+                    <caption>Backup table data</caption>
+                    <description>Additional String attribute for backup storage.</description>
+                    <attributeTypes><attributeType name="String"/></attributeTypes>
+                </property>
+                <property key="autoSave" type="boolean" defaultValue="false">
+                    <caption>Auto save</caption>
+                    <description>Automatically save table state to attribute on every change.</description>
+                </property>
+            </propertyGroup>
+        </propertyGroup>
+        <propertyGroup caption="Events">
+            <property key="onGenerateTable" type="action" required="false">
+                <caption>On generate table</caption>
+                <description>Microflow or nanoflow called when Generate Table is clicked. Run validation inside it, show feedback if needed, then set the Generate table result Boolean attribute to True (allow) or False (block).</description>
+            </property>
+            <property key="onCellClick" type="action" required="false">
+                <caption>On cell click/value change</caption>
+                <description>Action executed when a cell is clicked or its value changes.</description>
+            </property>
+            <property key="onTableChange" type="action" required="false">
+                <caption>On table structure change</caption>
+                <description>Action executed when the table structure changes.</description>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Style">
+            <propertyGroup caption="Styling">
+                <property key="tableBorderColor" type="string" required="false">
+                    <caption>Border color</caption>
+                    <description>CSS color for table borders. Default: #dee2e6.</description>
+                </property>
+                <property key="selectedCellColor" type="string" required="false">
+                    <caption>Selected cell color</caption>
+                    <description>CSS background color for selected cells. Default: #cfe2ff.</description>
+                </property>
+                <property key="mergedCellColor" type="string" required="false">
+                    <caption>Merged cell color</caption>
+                    <description>CSS background color for merged cells. Default: #e3f2fd.</description>
+                </property>
+                <property key="blankCellColor" type="string" required="false">
+                    <caption>Blank cell color</caption>
+                    <description>CSS background color for blanked cells. Default: #2c2c2c.</description>
+                </property>
+            </propertyGroup>
+        </propertyGroup>
+    </properties>
+</widget>
